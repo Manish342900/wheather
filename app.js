@@ -7,33 +7,28 @@ searchbutton.addEventListener("click",()=>{
         fetchdata(searchfield.value)
 })
 // let url=`https://api.weatherapi.com/v1/current.json?key=0604fc3681714f21b9682906242207&q=london&aqi=no`
-window.onload=()=>{
-        fetchdata(searchfield.value)
-}
+
 const fetchdata=async (target)=>{
-        let url=`https://api.weatherapi.com/v1/current.json?key=0604fc3681714f21b9682906242207&q=${target}&aqi=no`
-        
-        const result=await fetch(url);
-        var data = await result.json();
-        console.log(data)
-        document.querySelector('.tempreature').innerHTML=data.current.temp_c + 'C';
-        document.querySelector('.location').innerHTML=data.location.name;
-        document.querySelector('.time').innerHTML=data.location.localtime;
-        document.querySelector('.condition').innerHTML=data.current.condition.text;
         let logo=document.querySelector(".condition-logo");
-        const value=data.current.condition.text
-        
+        let value;
+        try{
+                let url=`https://api.weatherapi.com/v1/current.json?key=0604fc3681714f21b9682906242207&q=${target}&aqi=no`
 
-        // if(data.current.condition.text=="Sunny"){
+                const result=await fetch(url);
+                var data = await result.json();
+                console.log(data)
+                document.querySelector('.tempreature').innerHTML=data.current.temp_c + 'C';
+                document.querySelector('.location').innerHTML=data.location.name;
+                document.querySelector('.time').innerHTML=data.location.localtime;
+                document.querySelector('.condition').innerHTML=data.current.condition.text;   
+                value=data.current.condition.text
 
-        //         console.log("true")
+        }
+        catch(err){
+                document.body.innerHTML=`<img class="logo" src="invalid.svg" alt=""> <a href="index.html">Try again</a>`
+                console.log("asd")
+        }
 
-        // }else if(data.current.condition.text=="Partly cloudy"){
-        //         logo.innerHTML=`<img class="logo" src="partly-cloudy-rain-svgrepo-com.svg" alt="">`;
-        //         console.log("hi")
-
-
-        // }
         switch (value) {
                 case "Sunny":
                 logo.innerHTML=`<img class="logo" src="sunny-day-svgrepo-com.svg" alt="">`
