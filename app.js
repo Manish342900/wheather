@@ -1,11 +1,13 @@
 // 
 const searchfield=document.querySelector('.search input');
 const searchbutton=document.querySelector('.search button');
-const target=searchfield.value || "london"
+let target="london"
 
 
 searchbutton.addEventListener("click",()=>{
+        target=searchfield.value
         fetchdata(target)
+        console.log(target)
 })
 
 
