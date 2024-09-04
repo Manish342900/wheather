@@ -1,11 +1,14 @@
 // 
 const searchfield=document.querySelector('.search input');
 const searchbutton=document.querySelector('.search button');
+const target=searchfield.value || "london"
 
 
 searchbutton.addEventListener("click",()=>{
-        fetchdata(searchfield.value)
+        fetchdata(target)
 })
+
+
 // let url=`https://api.weatherapi.com/v1/current.json?key=0604fc3681714f21b9682906242207&q=london&aqi=no`
 
 const fetchdata=async (target)=>{
@@ -54,3 +57,4 @@ const fetchdata=async (target)=>{
                 break;
         }
 }
+fetchdata(target)
