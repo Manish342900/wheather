@@ -9,7 +9,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
 }
+
 .tempreature{
     font-size: 75px;
     font-weight: bold;
@@ -64,6 +66,9 @@ input[type="text"] {
     .search-bar{
         width: 200px;
         padding: 2px;
+    }
+    .condition{
+        font-size: 20px;
     }
 }
 .logo{
