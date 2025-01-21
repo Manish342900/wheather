@@ -17,7 +17,7 @@ const fetchdata=async (target)=>{
         let logo=document.querySelector(".condition-logo");
         let value;
         try{
-                let url=`https://api.weatherapi.com/v1/current.json?key=0604fc3681714f21b9682906242207&q=${target}&aqi=no`
+                let url=`https://api.weatherapi.com/v1/current.json?key=22a8c0313b8f4870acd163658251901&q=${target}&aqi=no`
 
                 const result=await fetch(url);
                 var data = await result.json();
