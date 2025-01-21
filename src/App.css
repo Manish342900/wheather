@@ -1,0 +1,14 @@
+.css-13cymwt-control{
+  min-width: 189px;
+}
+.app{
+  align-items: center;
+}
+.no-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 26px;
+  color: white;
+}

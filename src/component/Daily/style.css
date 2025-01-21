@@ -1,0 +1,142 @@
+.title{
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+    color: white;
+
+    
+}
+
+.accords{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.accords-item{
+    width: 100%;
+    min-width: 340px;
+    animation: slideInLeft 0.5s ease-out forwards;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+.accords-item:hover{
+  transform: scale(1.1);
+}
+.daily-item{
+    background-color:rgb(177, 175, 175);
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+  
+   
+}
+.weatherl{
+    width: 50px;
+    height: 50px;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+.day{
+    color: #212121;
+    flex: 1 1;
+    font-weight: 700px;
+    margin-left: 15px;
+}
+.desx{
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+}
+.min-max{
+    color: #757575;
+}
+.daily-details-grid{
+    display: grid;
+    row-gap:0 ;
+    grid-column-gap: 10px;
+    flex: 1 1;
+    grid-template-columns: auto auto;
+    padding: 5px 15px 5px 15px;
+    
+
+}
+.daily-details-grid-item{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+@keyframes pulse {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.8;
+    }
+    25% {
+      transform: rotate(15deg);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(0deg);
+      opacity: 0.8;
+    }
+    75% {
+        transform: rotate(-15deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: rotate(0deg);
+        opacity: 0.8;
+      }
+  } 
+
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%); /* Start off-screen to the left */
+      opacity: 0; /* Hidden at the start */
+    }
+    100% {
+      transform: translateX(0); /* Final position */
+      opacity: 1; /* Fully visible at the end */
+    }
+  }
+  .panel{
+    background-color: rgb(235, 235, 235);
+    border-radius: 0 0 15px 15px;
+    height: auto;
+    transform: translateY(-20px);
+    z-index: -1;
+    position: relative;
+    top:10px;
+    min-width: 340px;
+
+
+
+  }
+  .desption{
+    transition: transform 0.3s ease;
+  }
+  .desption:hover{
+    transform: scale(1.1);
+   
+  }
+  
+  @media (max-width: 768px) {
+    .daily-details-grid-item{
+      font-size: 12px;
+
+     
+    }
+  }
