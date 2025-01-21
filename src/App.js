@@ -1,11 +1,11 @@
 
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import './App.css';
 import CurrentWheather from './component/CurrentWeather/currentWheather';
 
 import Search from './component/search';
 import { fetchWheather } from './api/api';
-import Daily from '.';
+
 import Forecast from './component/Daily';
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import sunny from './style.css'
+
 
 export default function CurrentWheather({curr}) {
   // console.log(curr)
