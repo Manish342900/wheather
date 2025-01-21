@@ -1,5 +1,5 @@
 export const GEO_API_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo';
-const Wheather_URl='http://api.openweathermap.org/data/2.5'
+const Wheather_URl='https://api.openweathermap.org/data/2.5'
 const Wheather_API='cefe6343dff70279a59b18b317f7574d'
 
 export const geoApiOptions = {

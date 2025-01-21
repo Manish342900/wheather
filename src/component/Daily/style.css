@@ -127,6 +127,7 @@
   }
   .desption{
     transition: transform 0.3s ease;
+    font-weight: bolder;
   }
   .desption:hover{
     transform: scale(1.1);
@@ -139,4 +140,7 @@
 
      
     }
+  }
+  .daily-item label{
+    cursor: pointer;
   }
